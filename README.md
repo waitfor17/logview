@@ -1,1 +1,1 @@
-# logview
+# centralized log storage
