@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log Viewer</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="dist/moment.min.js"></script>
+    <script src="dist/Chart.min.js"></script>
+
+    <script src="dist/debounce.js"></script>
+    <script src="dist/js.cookie.min.js"></script>
+    <script src="dist/preact-with-hooks.js"></script>
+
+    <script src="common.js"></script>
+    <script src="tabs.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-item">
+            <a class="nav-link active" href="#" onmousedown="switchTab(event, 'tab-sys-errors')">Главная</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" href="#" onmousedown="switchTab(event, 'tab-diagrams')">Диаграммы</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" href="#" onmousedown="switchTab(event, 'tab-event-list')">Журнал</a>
+        </div>
+        <div class="expand"></div>
+        <div id="db-error" class="error"></div>
+        <a id="button-theme-light" href="#">Светлая</a>
+        <a id="button-theme-dark" href="#">Тёмная</a>
+    </nav>
+    <main>
+        <div id="tab-sys-errors" class="tab-pane show"></div>
+        <div id="tab-diagrams" class="tab-pane"></div>
+        <div id="tab-event-list" class="tab-pane"></div>
+    </main>
+
+    <script src="theme.js"></script>
+
+    <script src="filters.js"></script>
+
+    <script src="chart-common.js"></script>
+    <script src="chart-by-log.js"></script>
+    <script src="chart-by-level.js"></script>
+    <script src="chart-by-machine.js"></script>
+    <script src="chart-by-time.js"></script>
+
+    <script src="pagination.js"></script>
+    <script src="messages.js"></script>
+    <script src="tab-sys-errors.js"></script>
+    <script src="tab-diagrams.js"></script>
+    <script src="tab-event-list.js"></script>
+
+    <script src="db.js"></script>
+</body>
+
+</html>
